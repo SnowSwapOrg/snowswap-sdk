@@ -1,17 +1,17 @@
 {
-  "name": "@pancakeswap/sdk",
+  "name": "@snowswap/sdk",
   "license": "MIT",
-  "version": "2.4.0",
-  "description": "🛠 An SDK for building applications on top of Pancakeswap.",
+  "version": "2.4.2",
+  "description": "🛠 An SDK for building applications on top of Snowswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pancakeswap/pancake-swap-sdk.git",
+  "repository": "https://github.com/SnowSwapOrg/snowswap-swap-sdk.git",
   "keywords": [
-    "pancakeswap",
-    "bsc"
+    "snowswap",
+    "crab network"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "build": "tsdx build",
     "start": "tsdx watch",
     "test": "tsdx test",
-    "prepublishOnly": "tsdx build"
+    "prepublishOnly": "tsdx build",
+    "cp-frontend": "cp -rf ./dist/* ../pancake-frontend-abc/node_modules/@snowswap/sdk/dist"
   },
   "dependencies": {
     "@pancakeswap-libs/pancake-swap-core": "^0.1.0",
@@ -55,5 +56,8 @@
     "printWidth": 120,
     "semi": false,
     "singleQuote": true
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@snowswap/sdk",
   "license": "MIT",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "🛠 An SDK for building applications on top of Snowswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "start": "tsdx watch",
     "test": "tsdx test",
     "prepublishOnly": "tsdx build",
-    "cp-frontend": "cp -rf ./dist/* ../pancake-frontend-abc/node_modules/@snowswap/sdk/dist"
+    "cp-frontend": "cp -rf ./dist/* ../snowswap-frontend/node_modules/@snowswap/sdk/dist"
   },
   "dependencies": {
     "@pancakeswap-libs/pancake-swap-core": "^0.1.0",

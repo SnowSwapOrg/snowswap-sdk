@@ -5,7 +5,8 @@ export type BigintIsh = JSBI | bigint | string
 
 export enum ChainId {
   MAINNET = 44,
-  TESTNET = 256
+  TESTNET = 256,
+  DARWINIA = 46,
 }
 
 export enum TradeType {
@@ -19,9 +20,17 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x36ABF1A7851fBF9ae9D79dc3E39C1227068158B3'
+export const FACTORY_ADDRESS: { [chainId: number]: string } = {
+  [ChainId.MAINNET]: '0x36ABF1A7851fBF9ae9D79dc3E39C1227068158B3',
+  [ChainId.TESTNET]: '0x36ABF1A7851fBF9ae9D79dc3E39C1227068158B3',
+  [ChainId.DARWINIA]: '0x5669a449D892f03B4c541A321926f18e272c64A2',
+}
 
-export const INIT_CODE_HASH = '0x2a3eebed007578fadb94fc416a8002f6bcef7ee2aae9680a5616e2fb4e407a51'
+export const INIT_CODE_HASH: { [chainId: number]: string } = {
+  [ChainId.MAINNET]: '0x2a3eebed007578fadb94fc416a8002f6bcef7ee2aae9680a5616e2fb4e407a51',
+  [ChainId.TESTNET]: '0x2a3eebed007578fadb94fc416a8002f6bcef7ee2aae9680a5616e2fb4e407a51',
+  [ChainId.DARWINIA]: '0x14ec7cfedb33feaea422f80584a6907c850fbd72f4c3d01995ea175ed4b2ed67'
+}
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

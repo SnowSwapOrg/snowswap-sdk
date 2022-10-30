@@ -81,5 +81,13 @@ export const WETH = {
     'WCRAB',
     'Wrapped CRAB',
     'https://crab.network'
-  )
+  ),
+  [ChainId.DARWINIA]: new Token(
+    ChainId.DARWINIA,
+    '0xE7578598Aac020abFB918f33A20faD5B71d670b4',
+    18,
+    'WRING',
+    'Wrapped RING',
+    'https://darwinia.network'
+  ),
 }
